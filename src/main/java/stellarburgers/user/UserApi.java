@@ -6,8 +6,6 @@ import io.restassured.response.ValidatableResponse;
 import static io.restassured.RestAssured.given;
 import stellarburgers.utils.BaseURI;
 
-import static io.restassured.path.json.JsonPath.given;
-
 public class UserApi extends BaseURI {
 
     private static final String USER_URI = BASE_URI + "auth/";

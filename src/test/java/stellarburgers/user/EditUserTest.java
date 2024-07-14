@@ -73,7 +73,7 @@ public class EditUserTest {
     public void editUsersNameWithoutAuth(){
         String newName = RandomStringUtils.randomAlphabetic(8);
         userApi
-                .editEmailWithoutAuth(user, newName)
+                .editNameWithoutAuth(user, newName)
                 .assertThat()
                 .statusCode(SC_UNAUTHORIZED)
                 .and()
