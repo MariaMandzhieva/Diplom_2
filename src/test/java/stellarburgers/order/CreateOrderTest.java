@@ -1,4 +1,4 @@
-package stellarburgers.user;
+package stellarburgers.order;
 
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
@@ -6,8 +6,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import stellarburgers.order.Order;
-import stellarburgers.order.OrderApi;
+import stellarburgers.user.User;
+import stellarburgers.user.UserApi;
 
 import java.util.List;
 
