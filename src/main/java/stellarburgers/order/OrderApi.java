@@ -55,4 +55,23 @@ public class OrderApi extends BaseURI {
                 .post(ORDER_URI)
                 .then();
     }
+
+    @Step("Получение заказов авторизованного пользователя")
+    public ValidatableResponse getOrdersAuthUser(String accessToken){
+        return given()
+                .header("Authorization", accessToken)
+                .spec(getReqSpec())
+                .when()
+                .get(ORDER_URI)
+                .then();
+    }
+
+    @Step("Получение заказов неавторизованного пользователя")
+    public ValidatableResponse getOrdersWithoutAuthUser(){
+        return given()
+                .spec(getReqSpec())
+                .when()
+                .get(ORDER_URI)
+                .then();
+    }
 }

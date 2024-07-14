@@ -48,8 +48,8 @@ public class CreateOrderTest {
                 .body("success", equalTo(true));
 
         String firstIngredtId = ingredientsResponse.extract().path("data[0]._id");
-        String secondIngredId = ingredientsResponse.extract().path("data[4]._id");
-        String thirdIngredId = ingredientsResponse.extract().path("data[8]._id");
+        String secondIngredId = ingredientsResponse.extract().path("data[2]._id");
+        String thirdIngredId = ingredientsResponse.extract().path("data[4]._id");
         List<String> ingredients = List.of(firstIngredtId, secondIngredId, thirdIngredId);
         Order order = new Order(ingredients);
         ValidatableResponse orderResponse = orderApi.createOrder(token, order)
@@ -76,8 +76,8 @@ public class CreateOrderTest {
                 .body("success", equalTo(true));
 
         String firstIngredId = ingredientsResponse.extract().path("data[0]._id");
-        String secondIngredId = ingredientsResponse.extract().path("data[4]._id");
-        String thirdIngredId = ingredientsResponse.extract().path("data[8]._id");
+        String secondIngredId = ingredientsResponse.extract().path("data[2]._id");
+        String thirdIngredId = ingredientsResponse.extract().path("data[4]._id");
         List<String> ingredients = List.of(firstIngredId, secondIngredId, thirdIngredId);
         orderApi
                 .createOrderWithoutAuth(ingredients)
